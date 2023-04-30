@@ -230,12 +230,12 @@
         const customerName = urlSearchParams.get('customerName');
 
         $('#payment-details').append(`
-            <h2>Payment Details!</h2>
-            <h3>Package Name: ${packageName}</h3>
-            <h3>Package Price: ${packageDetails.price} L.E</h3>
-            <h3>Customer Name: ${customerName}</h3>
-            <h3>Booking Date: ${bookingDate}</h3>
-            <h3>Description: ${packageDetails.description}</h3>
+            <h2 class="pay">Payment Details!</h2>
+            <h3 class="pay">Package Name: ${packageName}</h3>
+            <h3 class="paye">Package Price: ${packageDetails.price} L.E</h3>
+            <h3 class="pay">Customer Name: ${customerName}</h3>
+            <h3 class="pay">Booking Date: ${bookingDate}</h3>
+            <h3 class="pay">Description: ${packageDetails.description}</h3>
         `)
     </script>
 

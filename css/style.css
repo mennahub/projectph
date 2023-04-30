@@ -655,3 +655,9 @@ input[type=text]
         }
     
    }
+   .pay{
+    color: #1767a4;
+   }
+   .paye{
+    color: #f44336;
+   }
