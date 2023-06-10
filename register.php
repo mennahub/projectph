@@ -75,21 +75,21 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link">Services</a>
-                    <a href="package.html" class="nav-item nav-link active">Packages</a>
+                    <a href="index.php" class="nav-item nav-link">Home</a>
+                    <a href="about.php" class="nav-item nav-link">About</a>
+                    <a href="service.php" class="nav-item nav-link">Services</a>
+                    <a href="package.php" class="nav-item nav-link">Packages</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">
-                            <a href="booking.html#booking-form" class="dropdown-item">Booking</a>
-                            <a href="team.html" class="dropdown-item">Team</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="booking.php#booking-form" class="dropdown-item">Booking</a>
+                            <a href="team.php" class="dropdown-item">Team</a>
+                            <a href="testimonial.php" class="dropdown-item">Testimonial</a>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="contact.php" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="login.html" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
+                <a href="register.php" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
             </div>
         </nav>
 
@@ -97,13 +97,12 @@
             <div class="container py-5">
                 <div class="row justify-content-center py-5">
                     <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                        <h1 class="display-3 text-white animated slideInDown">Packages</h1>
+                        <h1 class="display-3 text-white animated slideInDown">Register</h1>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center">
-                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                                 <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                                <li class="breadcrumb-item"><a href="Package.html">Packages</a></li>
-                                <li class="breadcrumb-item text-white active" aria-current="page">Saint Cathrine</li>
+                                <li class="breadcrumb-item text-white active" aria-current="page">Register</li>
                             </ol>
                         </nav>
                     </div>
@@ -113,108 +112,77 @@
     </div>
     <!-- Navbar & Hero End -->
 
+    <!--Register Start-->
 
-    <!-- Package Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Saint Catherine</h6>
-                <h1 class="mb-5">Awesome Packages</h1>
+        <h2><center><b><u><i> Login or Signup </i></u></b></center></h2>
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="reg"><center>Login</center></button>
+        <div id="id01" class="modal">
+            <form class="modal-content animate" action="login.php" method="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="close modal">&times;</span>
+                    <img width="150px"height="150px" src="img/profile.webp" alt="PP" class="pp">
+                </div>
+                <div class="container">
+                    <label for="username">
+                        <b>Username</b>
+                    </label>
+                    <input type="text" placeholder="Enter Username" name="username" required>
+                    <br> <br>
+                    <label for="password"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="password" required>
+                    <br> <br>
+                    <button class="reg" type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember">
+                    Remember Me
+                </label>
             </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="package-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="Saint Catherine/gabl.jpg" alt="">
-                        </div>
-                        <div class="d-flex border-bottom">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt text-primary me-2"></i>Saint Catherine</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>3 days</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fas fa-campground text-primary me-2"></i>Gebal</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>1 Person</small>
-                        </div>
-                        <div class="text-center p-4">
-                            <h3 class="mb-0">400 L.E</h3>
-                            <div class="mb-3">
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                            </div>
-                            <p>You will enjoy your holiday in Saint Catherine in a natural way;<br>This package contain:<br>-Trip for 3 Pools.<br>-Hiking to Gabal Mousa.<br>-Transportation.</p>
-                            <div class="d-flex justify-content-center mb-2">
-                                <a href="booking.html#booking-form" class="btn btn-sm btn-primary px-3" style="border-radius: 30px 30px 30px 30px;">Book Now</a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="container" style="background-color: #f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="package-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="Saint Catherine/image0.webp" alt="">
-                        </div>
-                        <div class="d-flex border-bottom">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt text-primary me-2"></i>Saint Catherine</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>3 days</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fas fa-campground text-primary me-2"></i>Gebal</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>1 Person</small>
-                        </div>
-                        <div class="text-center p-4">
-                            <h3 class="mb-0">500 L.E</h3>
-                            <div class="mb-3">
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                            </div>
-                            <p>You will enjoy your holiday in Saint Catherine in a natural way;<br>This package contain:<br>-Trip for 3 Pools & Safari.<br>-Hiking to Gabal Mousa.<br>-Transportation.</p>
-                            <div class="d-flex justify-content-center mb-2">
-                                <a href="booking.html#booking-form" class="btn btn-sm btn-primary px-3" style="border-radius: 30px 30px 30px 30px;">Book Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="package-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="Saint Catherine/mt-sinai2.jpg" alt="">
-                        </div>
-                        <div class="d-flex border-bottom">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt text-primary me-2"></i>Saint Catherine</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>3 days</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fas fa-campground text-primary me-2"></i>Gebal</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>1 Person</small>
-                        </div>
-                        <div class="text-center p-4">
-                            <h3 class="mb-0">700 L.E</h3>
-                            <div class="mb-3">
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                            </div>
-                            <p>You will enjoy your holiday in Saint Catherine in a natural way;This package contain:<br>-Trip for 3 Pools & Safari.<br>-Hiking to Gabal Mousa.<br>-A night at Gabl Al Tawelaat.<br>-Transportation.</p>
-                            <div class="d-flex justify-content-center mb-2">
-                                <a href="booking.html#booking-form" class="btn btn-sm btn-primary px-3" style="border-radius: 30px 30px 30px 30px;">Book Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
+            </form>
         </div>
-        <br>
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <center>
-        <a href="contact.html" class="btn btn-sm btn-primary px-3" style="border-radius: 100px 100px 100px 100px; height: 100%;">Customize Your Own Program Now</a>
-    </center>
-    </div>
-    </div>
-    <!-- Package End -->
-        
+        <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;" class="reg"><center>Signup</center></button>
+        <div id="id02" class="modal">
+            <form class="modal-contentt animate" action="signup.php" method="post">
+                <div class="imgcontainer">
+                     <span onclick="document.getElementById('id02').style.display='none'" class="close" title="close modal">&times;</span>
+                          <h2><U><b>Sign Up</b></U></h2>
+                          <p>Please fill in this form to create an account.</p>
+                          <hr>
+                          <label for="first_name"><b>First Name</b></label>
+                          <input type="text" placeholder="Enter first_name" name="first_name" required>
+                          <label for="last_name"><b>Last Name</b></label>
+                          <input type="text" placeholder="Enter last_name" name="last_name" required>
+                          <br>
+                          <br>
+                          <label for="email"><b>Email</b></label>
+                          <input type="text" placeholder="Enter Email" name="email" required>
+                          <br>    
+                          <br>   
+                          <label for="username"><b>Username</b></label>
+                          <input type="text" placeholder="Enter Username" name="username" required>
+                          <br> <br>   
+                          <label for="password"><b>Password</b></label>
+                          <input type="password" placeholder="Enter Password" name="password" required>
+                          <br> <br>
+                          <label for="repeat-password"><b>Repeat Password</b></label>
+                          <input type="password" placeholder="Repeat Password" name="repeat-password" required>
+                          <br><br>
+                        </div>
+                    <div class="container" style="background-color: #f1f1f1">
+                            <!-- <label>
+                                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                              </label> -->
+                              <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>                  
+                              <button type="submit" class="reg">Sign Up</button>
+                        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+                    </div>
+                      </form>
+
+        </div> 
+    <!--Register End-->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -222,11 +190,11 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Company</h4>
-                    <a class="btn btn-link" href="about.html">About Us</a>
-                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="about.php">About Us</a>
+                    <a class="btn btn-link" href="contact.php">Contact Us</a>
                     <a class="btn btn-link" href="">Privacy Policy</a>
                     <a class="btn btn-link" href="">Terms &amp; Condition</a>
-                    <a class="btn btn-link" href="contact.html">FAQs &amp; Help</a>
+                    <a class="btn btn-link" href="contact.php">FAQs &amp; Help</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
@@ -267,7 +235,7 @@
                     <p>Let's live the Adventure now</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"><a href="login.html">Registration</a></button>
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"><a href="register.php">Resiteration</a></button>
                     </div>
                 </div>
             </div>
@@ -276,16 +244,16 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        © <a class="border-bottom" href="index.html">Adventurous</a>, All Right Reserved.
+                        © <a class="border-bottom" href="index.php">Adventurous</a>, All Right Reserved.
 
-                        Designed By <a class="border-bottom" href="team.html">Our Team</a>
+                        Designed By <a class="border-bottom" href="team.php">Our Team</a>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
-                            <a href="index.html">Home</a>
+                            <a href="index.php">Home</a>
                             <a href="">Cookies</a>
-                            <a href="contact.html">Help</a>
-                            <a href="contact.html">FQAs</a>
+                            <a href="contact.php">Help</a>
+                            <a href="contact.php">FQAs</a>
                         </div>
                     </div>
                 </div>

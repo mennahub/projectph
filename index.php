@@ -1,3 +1,7 @@
+<?php
+include 'functions.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -75,21 +79,25 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link">Services</a>
-                    <a href="Package.html" class="nav-item nav-link">Packages</a>
+                    <a href="index" class="nav-item nav-link active">Home</a>
+                    <a href="about.php" class="nav-item nav-link">About</a>
+                    <a href="service.php" class="nav-item nav-link">Services</a>
+                    <a href="Package.php" class="nav-item nav-link">Packages</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">
-                            <a href="booking.html#booking-form" class="dropdown-item">Booking</a>
-                            <a href="team.html" class="dropdown-item">Team</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="booking.php#booking-form" class="dropdown-item">Booking</a>
+                            <a href="team.php" class="dropdown-item">Team</a>
+                            <a href="testimonial.php" class="dropdown-item">Testimonial</a>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="contact.php" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="login.html" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
+                <?php if (is_logged_in()): ?>
+                    <a href="account.php" class="btn btn-primary rounded-pill py-2 px-4">Account</a>
+                <?php else: ?>
+                    <a href="register.php" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
+                <?php endif; ?>
                 
                 
             </div>
@@ -100,7 +108,7 @@
                 <div class="row justify-content-center py-5">
                     <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
                         <h1 class="display-3 text-white mb-3 animated slideInDown">Enjoy Your Vacation With Us</h1>
-                        <p class="fs-4 text-white mb-4 animated slideInDown">Camping is one of the most beautiful things that you can do it to get rid of your negative energy by staying away from the noise of the city. <br>You will aquire new and fun experience from camping.<br>Come and Join us <a href="Package.html"><u>Now</u></a></p>
+                        <p class="fs-4 text-white mb-4 animated slideInDown">Camping is one of the most beautiful things that you can do it to get rid of your negative energy by staying away from the noise of the city. <br>You will aquire new and fun experience from camping.<br>Come and Join us <a href="Package.php"><u>Now</u></a></p>
                         <div class="position-relative w-75 mx-auto animated slideInDown">
                             <input class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" list="cities" type="text" id="city-input" placeholder="Eg: Dahab">
                             <button type="button" id="city-search" class="btn btn-primary rounded-pill py-2 px-4 position-absolute top-0 end-0 me-2" style="margin-top: 7px;" onclick="linkToPackage">Search</button>
@@ -155,7 +163,7 @@
                             <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Natural Places Tours</p>
                         </div>
                     </div>
-                    <a class="btn btn-primary py-3 px-5 mt-2" href="team.html">Read More</a>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="team.php">Read More</a>
                 </div>
             </div>
         </div>
@@ -260,21 +268,21 @@
                 <div class="col-lg-7 col-md-6">
                     <div class="row g-3">
                         <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
-                            <a class="position-relative d-block overflow-hidden" href="da.html">
+                            <a class="position-relative d-block overflow-hidden" href="da.php">
                                 <img class="img-fluid position-absolute w-100 h-100" src="Dahab/5b.jpg" alt="">
                                 <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">35% OFF</div>
                                 <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Dahab</div>
                             </a>
                         </div>
                         <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
-                            <a class="position-relative d-block overflow-hidden" href="Nu.html">
+                            <a class="position-relative d-block overflow-hidden" href="Nu.php">
                                 <img class="img-fluid position-absolute w-100 h-100" src="Nuweiba/flyingcarpettours.com_.jpeg" alt="">
                                 <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">30% OFF</div>
                                 <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Nuweiba</div>
                             </a>
                         </div>
                         <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
-                            <a class="position-relative d-block overflow-hidden" href="ta.html">
+                            <a class="position-relative d-block overflow-hidden" href="ta.php">
                                 <img class="img-fluid position-absolute w-100 h-100" src="Taba/taba-1-1024x654.jpg" alt="">
                                 <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">25% OFF</div>
                                 <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Taba</div>
@@ -283,14 +291,14 @@
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
-                    <a class="position-relative d-block h-100 overflow-hidden" href="saint.html">
+                    <a class="position-relative d-block h-100 overflow-hidden" href="saint.php">
                         <img class="img-fluid position-absolute w-100 h-100" src="Saint Catherine/vlad-kiselov-Fe3eF795O24-unsplash-1.jpg" alt="" style="object-fit: cover;">
                         <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">20% OFF</div>
                         <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Saint Cathrine</div>
                     </a>
                 </div>
                 <div class="col-lg-100 col-md-500 wow zoomIn" data-wow-delay="0.5s" style="min-height: 350px;">
-                    <a class="position-relative d-block h-100 overflow-hidden" href="ras.html">
+                    <a class="position-relative d-block h-100 overflow-hidden" href="ras.php">
                         <img class="img-fluid position-absolute w-100 h-100" src="ras shetaan/edit 2.jpg" alt="" style="object-fit: cover;">
                         <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">15% OFF</div>
                         <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Ras Shetaan</div>
@@ -316,7 +324,7 @@
                         <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
                             <i class="fa fa-map-marker-alt fa-3x text-white"></i>
                         </div>
-                        <h5 class="mt-4"><a href="Package.html"> Where?</a></h5>
+                        <h5 class="mt-4"><a href="Package.php"> Where?</a></h5>
                         <hr class="w-25 mx-auto bg-primary mb-1">
                         <hr class="w-50 mx-auto bg-primary mt-0">
                         <p class="mb-0">Choose your prefered destination, <br> ,program you like.  </p>
@@ -327,7 +335,7 @@
                         <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
                             <i class="fa fa-clock fa-3x text-white"></i>
                         </div>
-                        <h5 class="mt-4"><a href="booking.html#booking-form">When?</a> </h5>
+                        <h5 class="mt-4"><a href="booking.php#booking-form">When?</a> </h5>
                         <hr class="w-25 mx-auto bg-primary mb-1">
                         <hr class="w-50 mx-auto bg-primary mt-0">
                         <p class="mb-0">Now choose your perfect time for the perfect vacation. </p>
@@ -338,7 +346,7 @@
                         <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
                             <i class="fa fa-dollar-sign fa-3x text-white"></i>
                         </div>
-                        <h5 class="mt-4"><a href="booking.html#booking-form">Confirm!</a></h5>
+                        <h5 class="mt-4"><a href="booking.php#booking-form">Confirm!</a></h5>
                         <hr class="w-25 mx-auto bg-primary mb-1">
                         <hr class="w-50 mx-auto bg-primary mt-0">
                         <p class="mb-0">Now Choose your prefered payment method, Now Lets go! <br></p>
@@ -579,11 +587,11 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Company</h4>
-                    <a class="btn btn-link" href="about.html">About Us</a>
-                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="about.php">About Us</a>
+                    <a class="btn btn-link" href="contact.php">Contact Us</a>
                     <a class="btn btn-link" href="">Privacy Policy</a>
                     <a class="btn btn-link" href="">Terms &amp; Condition</a>
-                    <a class="btn btn-link" href="contact.html">FAQs &amp; Help</a>
+                    <a class="btn btn-link" href="contact.php">FAQs &amp; Help</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
@@ -624,7 +632,7 @@
                     <p>Let's live the Adventure now</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"><a href="login.html">Registration</a></button>
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"><a href="register.php">Registration</a></button>
                     </div>
                 </div>
             </div>
@@ -633,16 +641,16 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        © <a class="border-bottom" href="index.html">Adventurous</a>, All Right Reserved.
+                        © <a class="border-bottom" href="index.php">Adventurous</a>, All Right Reserved.
 
-                        Designed By <a class="border-bottom" href="team.html">Our Team</a>
+                        Designed By <a class="border-bottom" href="team.php">Our Team</a>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
-                            <a href="index.html">Home</a>
+                            <a href="index.php">Home</a>
                             <a href="">Cookies</a>
-                            <a href="contact.html">Help</a>
-                            <a href="contact.html">FQAs</a>
+                            <a href="contact.php">Help</a>
+                            <a href="contact.php">FQAs</a>
                         </div>
                     </div>
                 </div>

@@ -1,3 +1,7 @@
+<?php
+    include 'functions.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,21 +79,25 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link">Services</a>
-                    <a href="package.html" class="nav-item nav-link active">Packages</a>
+                    <a href="index.php" class="nav-item nav-link">Home</a>
+                    <a href="about.php" class="nav-item nav-link">About</a>
+                    <a href="service.php" class="nav-item nav-link">Services</a>
+                    <a href="package.php" class="nav-item nav-link active">Packages</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">
-                            <a href="booking.html#booking-form" class="dropdown-item">Booking</a>
-                            <a href="team.html" class="dropdown-item">Team</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="booking.php#booking-form" class="dropdown-item">Booking</a>
+                            <a href="team.php" class="dropdown-item">Team</a>
+                            <a href="testimonial.php" class="dropdown-item">Testimonial</a>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="contact.php" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="login.html" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
+                <?php if (is_logged_in()): ?>
+                    <a href="account.php" class="btn btn-primary rounded-pill py-2 px-4">Account</a>
+                <?php else: ?>
+                    <a href="register.php" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
+                <?php endif; ?>
             </div>
         </nav>
 
@@ -100,9 +108,9 @@
                         <h1 class="display-3 text-white animated slideInDown">Packages</h1>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center">
-                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                                 <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                                <li class="breadcrumb-item"><a href="Package.html">Packages</a></li>
+                                <li class="breadcrumb-item"><a href="Package.php">Packages</a></li>
                                 <li class="breadcrumb-item text-white active" aria-current="page">Taba</li>
                             </ol>
                         </nav>
@@ -144,7 +152,7 @@
                             </div>
                             <p>You will enjoy your holiday in Run Away Camp in a simple way; This package contain:<br>-Room with 2 beds & bathroom.<br>-Scuba Diving.<br>-Visit Coloured Cayon.<br>-Castle Zaman.<br>-Transportaion.</p>
                             <div class="d-flex justify-content-center mb-2">
-                                <a href="booking.html#booking-form" class="btn btn-sm btn-primary px-3" style="border-radius: 30px 30px 30px 30px;">Book Now</a>
+                                <a href="booking.php#booking-form" class="btn btn-sm btn-primary px-3" style="border-radius: 30px 30px 30px 30px;">Book Now</a>
                             </div>
                         </div>
                     </div>
@@ -171,7 +179,7 @@
                             </div>
                             <p>You will enjoy your holiday in Run Away Camp in a simple way; This package contain:<br>-Room with 2 beds & bathroom.<br>-Visit Wishwashi Canyon .<br>-Visit Pharaoh's island.<br>-Visit Ras Mohammed Park.<br>-Transportaion.</p>
                             <div class="d-flex justify-content-center mb-2">
-                                <a href="booking.html#booking-form" class="btn btn-sm btn-primary px-3" style="border-radius: 30px 30px 30px 30px;">Book Now</a>
+                                <a href="booking.php#booking-form" class="btn btn-sm btn-primary px-3" style="border-radius: 30px 30px 30px 30px;">Book Now</a>
                             </div>
                         </div>
                     </div>
@@ -198,7 +206,7 @@
                             </div>
                             <p>You will enjoy your holiday in Run Away Camp in a simple way; This package contain:<br>-Room with 2 beds & bathroom.<br>-Full day at Fajod Bay.<br>-Scuba Diving.<br>-Visit Ras Mohammed Park.<br>-Transportaion.</p>
                             <div class="d-flex justify-content-center mb-2">
-                                <a href="booking.html#booking-form" class="btn btn-sm btn-primary px-3" style="border-radius: 30px 30px 30px 30px;">Book Now</a>
+                                <a href="booking.php#booking-form" class="btn btn-sm btn-primary px-3" style="border-radius: 30px 30px 30px 30px;">Book Now</a>
                             </div>
                         </div>
                     </div>
@@ -209,7 +217,7 @@
         <br>
         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <center>
-        <a href="contact.html" class="btn btn-sm btn-primary px-3" style="border-radius: 100px 100px 100px 100px; height: 100%;">Customize Your Own Program Now</a>
+        <a href="contact.php" class="btn btn-sm btn-primary px-3" style="border-radius: 100px 100px 100px 100px; height: 100%;">Customize Your Own Program Now</a>
     </center>
     </div>
     </div>
@@ -222,11 +230,11 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Company</h4>
-                    <a class="btn btn-link" href="about.html">About Us</a>
-                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="about.php">About Us</a>
+                    <a class="btn btn-link" href="contact.php">Contact Us</a>
                     <a class="btn btn-link" href="">Privacy Policy</a>
                     <a class="btn btn-link" href="">Terms &amp; Condition</a>
-                    <a class="btn btn-link" href="contact.html">FAQs &amp; Help</a>
+                    <a class="btn btn-link" href="contact.php">FAQs &amp; Help</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
@@ -267,7 +275,7 @@
                     <p>Let's live the Adventure now</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"><a href="login.html">Registration</a></button>
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"><a href="register.php">Registration</a></button>
                     </div>
                 </div>
             </div>
@@ -276,16 +284,16 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        © <a class="border-bottom" href="index.html">Adventurous</a>, All Right Reserved.
+                        © <a class="border-bottom" href="index.php">Adventurous</a>, All Right Reserved.
 
-                        Designed By <a class="border-bottom" href="team.html">Our Team</a>
+                        Designed By <a class="border-bottom" href="team.php">Our Team</a>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
-                            <a href="index.html">Home</a>
+                            <a href="index.php">Home</a>
                             <a href="">Cookies</a>
-                            <a href="contact.html">Help</a>
-                            <a href="contact.html">FQAs</a>
+                            <a href="contact.php">Help</a>
+                            <a href="contact.php">FQAs</a>
                         </div>
                     </div>
                 </div>
