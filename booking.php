@@ -1,3 +1,7 @@
+<?php
+    include 'functions.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en"><head>
     <meta charset="utf-8">
@@ -74,21 +78,25 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link">Services</a>
-                    <a href="package.html" class="nav-item nav-link">Packages</a>
+                    <a href="index.php" class="nav-item nav-link">Home</a>
+                    <a href="about.php" class="nav-item nav-link">About</a>
+                    <a href="service.php" class="nav-item nav-link">Services</a>
+                    <a href="package.php" class="nav-item nav-link">Packages</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">
-                            <a href="booking.html#booking-form" class="dropdown-item active">Booking</a>
-                            <a href="team.html" class="dropdown-item">Team</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="booking.php#booking-form" class="dropdown-item active">Booking</a>
+                            <a href="team.php" class="dropdown-item">Team</a>
+                            <a href="testimonial.php" class="dropdown-item">Testimonial</a>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="contact.php" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="login.html" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
+                <?php if (is_logged_in()): ?>
+                    <a href="account.php" class="btn btn-primary rounded-pill py-2 px-4">Account</a>
+                <?php else: ?>
+                    <a href="register.php" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
+                <?php endif; ?>
             </div>
         </nav>
         <div class="container-fluid bg-primary py-5 mb-5 hero-header">
@@ -98,7 +106,7 @@
                         <h1 class="display-3 text-white animated slideInDown">Booking</h1>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center">
-                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                                 <li class="breadcrumb-item"><a href="#">Pages</a></li>
                                 <li class="breadcrumb-item text-white active" aria-current="page">Booking</li>
                             </ol>
@@ -124,7 +132,7 @@
                         <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
                             <i class="fa fa-map-marker-alt fa-3x text-white"></i>
                         </div>
-                        <h5 class="mt-4"><a href="Package.html"> Where?</a></h5>
+                        <h5 class="mt-4"><a href="Package.php"> Where?</a></h5>
                         <hr class="w-25 mx-auto bg-primary mb-1">
                         <hr class="w-50 mx-auto bg-primary mt-0">
                         <p class="mb-0">Choose your prefered destination, <br> ,program you like.  </p>
@@ -135,7 +143,7 @@
                         <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
                             <i class="fa fa-clock fa-3x text-white"></i>
                         </div>
-                        <h5 class="mt-4"><a href="booking.html#booking-form">When?</a> </h5>
+                        <h5 class="mt-4"><a href="booking.php#booking-form">When?</a> </h5>
                         <hr class="w-25 mx-auto bg-primary mb-1">
                         <hr class="w-50 mx-auto bg-primary mt-0">
                         <p class="mb-0">Now choose your perfect time for the perfect vacation. </p>
@@ -146,7 +154,7 @@
                         <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
                             <i class="fa fa-dollar-sign fa-3x text-white"></i>
                         </div>
-                        <h5 class="mt-4"><a href="booking.html#booking-form">Confirm!</a></h5>
+                        <h5 class="mt-4"><a href="booking.php#booking-form">Confirm!</a></h5>
                         <hr class="w-25 mx-auto bg-primary mb-1">
                         <hr class="w-50 mx-auto bg-primary mt-0">
                         <p class="mb-0">Now Choose your prefered payment method, Now Lets go! <br></p>
@@ -170,33 +178,33 @@
                         <p class="mb-4">We Want to make it easy for you, So now you can pay online to reserve your seat.</p>
                         <p class="mb-4">If you need to enjoy your holiday in a diffrent place with a positive energy , you need to book now and the steps is so easy; Let's join our Adventure to have a good memories.</p>
                         <p class="mb-4">You need just an easy step to enjoy our fun memories.</p>
-                        <a class="btn btn-outline-light py-3 px-5 mt-2" href="about.html">Read More</a>
+                        <a class="btn btn-outline-light py-3 px-5 mt-2" href="about.php">Read More</a>
                     </div>
                     <div class="col-md-6">
                         <h1 class="text-white mb-4">Book A Tour</h1>
-                        <form id="booking-form">
+                        <form id="booking-form" action="booking_form.php" method="post">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control bg-transparent" id="name" placeholder="Your Name" required>
+                                        <input type="text" class="form-control bg-transparent" id="name" name="name" placeholder="Your Name" required>
                                         <label for="name">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control bg-transparent" id="email" placeholder="Your Email">
+                                        <input type="email" class="form-control bg-transparent" id="email" name="email" placeholder="Your Email">
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating date" id="booking-date" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-transparent datetimepicker-input" id="booking-date" placeholder="Date &amp; Time" data-target="#booking-date" data-toggle="datetimepicker" required>
+                                        <input type="text" class="form-control bg-transparent datetimepicker-input" id="booking-date" name="date" placeholder="Date &amp; Time" data-target="#booking-date" data-toggle="datetimepicker" required>
                                         <label for="datetime">Date &amp; Time</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <select class="form-select bg-transparent" id="packages" required>
+                                        <select class="form-select bg-transparent" id="packages" name="package" required>
                                             <option value="Dahab 1">Dahab 1</option>
                                             <option value="Dahab 2">Dahab 2</option>
                                             <option value="Dahab 3">Dahab 3</option>
@@ -218,8 +226,8 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control bg-transparent" placeholder="Special Request" id="message" style="height: 100px"></textarea>
-                                        <label for="message">Special Request</label>
+                                        <textarea class="form-control bg-transparent" placeholder="Special Request" id="special_request" name="special_request" style="height: 100px"></textarea>
+                                        <label for="special_request">Special Request</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -241,11 +249,11 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Company</h4>
-                    <a class="btn btn-link" href="about.html">About Us</a>
-                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="about.php">About Us</a>
+                    <a class="btn btn-link" href="contact.php">Contact Us</a>
                     <a class="btn btn-link" href="">Privacy Policy</a>
                     <a class="btn btn-link" href="">Terms &amp; Condition</a>
-                    <a class="btn btn-link" href="contact.html">FAQs &amp; Help</a>
+                    <a class="btn btn-link" href="contact.php">FAQs &amp; Help</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
@@ -286,7 +294,7 @@
                     <p>Let's live the Adventure now</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"><a href="login.html">Registration</a></button>
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"><a href="register.php">Registration</a></button>
                     </div>
                 </div>
             </div>
@@ -295,16 +303,16 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        © <a class="border-bottom" href="index.html">Adventurous</a>, All Right Reserved.
+                        © <a class="border-bottom" href="index.php">Adventurous</a>, All Right Reserved.
 
-                        Designed By <a class="border-bottom" href="team.html">Our Team</a>
+                        Designed By <a class="border-bottom" href="team.php">Our Team</a>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
-                            <a href="index.html">Home</a>
+                            <a href="index.php">Home</a>
                             <a href="">Cookies</a>
-                            <a href="contact.html">Help</a>
-                            <a href="contact.html">FQAs</a>
+                            <a href="contact.php">Help</a>
+                            <a href="contact.php">FQAs</a>
                         </div>
                     </div>
                 </div>
@@ -333,14 +341,14 @@
     <script src="js/main.js"></script>
     <script type="text/javascript">
         $(function () {
-            $("#booking-form").on('submit', (e) => {
-                e.preventDefault();
-                const form  = e.target;
-                const customerName = form.name.value;
-                const bookingDate = form['booking-date'].value;
-                const packageName = form['packages'].value
-                window.location = `Payment.html?bookingDate=${bookingDate}&packageName=${packageName}&customerName=${customerName}`
-            })
+            // $("#booking-form").on('submit', (e) => {
+            //     e.preventDefault();
+            //     const form  = e.target;
+            //     const customerName = form.name.value;
+            //     const bookingDate = form['booking-date'].value;
+            //     const packageName = form['packages'].value
+            //     window.location = `Payment.php?bookingDate=${bookingDate}&packageName=${packageName}&customerName=${customerName}`
+            // })
             
             $('#booking-date').datetimepicker({
                 format: 'L',

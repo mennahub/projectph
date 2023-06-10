@@ -1,6 +1,9 @@
+<?php
+    include 'functions.php';
+?>
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="utf-8">
     <title>Adventurous- Camping Agency -</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -75,21 +78,25 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link">Services</a>
-                    <a href="package.html" class="nav-item nav-link active">Packages</a>
+                    <a href="index.php" class="nav-item nav-link">Home</a>
+                    <a href="about.php" class="nav-item nav-link">About</a>
+                    <a href="service.php" class="nav-item nav-link">Services</a>
+                    <a href="package.php" class="nav-item nav-link active">Packages</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">
-                            <a href="booking.html#booking-form" class="dropdown-item">Booking</a>
-                            <a href="team.html" class="dropdown-item">Team</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="booking.php#booking-form" class="dropdown-item">Booking</a>
+                            <a href="team.php" class="dropdown-item">Team</a>
+                            <a href="testimonial.php" class="dropdown-item">Testimonial</a>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="contact.php" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="login.html" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
+                <?php if (is_logged_in()): ?>
+                    <a href="account.php" class="btn btn-primary rounded-pill py-2 px-4">Account</a>
+                <?php else: ?>
+                    <a href="register.php" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
+                <?php endif; ?>
             </div>
         </nav>
 
@@ -100,10 +107,9 @@
                         <h1 class="display-3 text-white animated slideInDown">Packages</h1>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center">
-                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                                 <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                                <li class="breadcrumb-item"><a href="Package.html">Packages</a></li>
-                                <li class="breadcrumb-item text-white active" aria-current="page">Ras Shetaan</li>
+                                <li class="breadcrumb-item text-white active" aria-current="page">Packages</li>
                             </ol>
                         </nav>
                     </div>
@@ -118,100 +124,52 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Ras Shetaan</h6>
-                <h1 class="mb-5">Awesome Packages</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">Packages</h6>
+                <h1 class="mb-5">Choose your Favorite Location</h1>
             </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="package-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="ras shetaan/maxresdefault.jpg" alt="">
+            <div class="row g-3">
+                <div class="col-lg-7 col-md-6">
+                    <div class="row g-3">
+                        <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
+                            <a class="position-relative d-block overflow-hidden" href="da.php">
+                                <img class="img-fluid position-absolute w-100 h-100" src="Dahab/5b.jpg" alt="">
+                                <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">35% OFF</div>
+                                <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Dahab</div>
+                            </a>
                         </div>
-                        <div class="d-flex border-bottom">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt text-primary me-2"></i>Ras Shetaan</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>5 days</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fas fa-campground text-primary me-2"></i>Mixer</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>2 Person</small>
+                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
+                            <a class="position-relative d-block overflow-hidden" href="Nu.php">
+                                <img class="img-fluid position-absolute w-100 h-100" src="Nuweiba/flyingcarpettours.com_.jpeg" alt="">
+                                <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">30% OFF</div>
+                                <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Nuweiba</div>
+                            </a>
                         </div>
-                        <div class="text-center p-4">
-                            <h3 class="mb-0">2,250 L.E</h3>
-                            <div class="mb-3">
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                            </div>
-                            <p>You will enjoy your holiday in Mixer Camp in a simple way; This package contain:<br>-Room with 2 beds & bathroom.<br>-Diving in Ras Mamlish.<br>-Visit the Coloured Canyon.<br>-Tranportations.</p>
-                            <div class="d-flex justify-content-center mb-2">
-                                <a href="booking.html#booking-form" class="btn btn-sm btn-primary px-3" style="border-radius: 30px 30px 30px 30px;">Book Now</a>
-                            </div>
+                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
+                            <a class="position-relative d-block overflow-hidden" href="ta.php">
+                                <img class="img-fluid position-absolute w-100 h-100" src="Taba/taba-1-1024x654.jpg" alt="">
+                                <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">25% OFF</div>
+                                <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Taba</div>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="package-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="ras shetaan/ras-shaitan-nuweiba-4-1.jpg" alt="">
-                        </div>
-                        <div class="d-flex border-bottom">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt text-primary me-2"></i>Ras Shetaan</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>5 days</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fas fa-campground text-primary me-2"></i>Mixer</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>2 Person</small>
-                        </div>
-                        <div class="text-center p-4">
-                            <h3 class="mb-0">2,350 L.E</h3>
-                            <div class="mb-3">
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                            </div>
-                            <p>You will enjoy your holiday in Mixer Camp in a simple way; This package contain:<br>-Room with 2 beds & bathroom.<br>-Diving in Dense.<br>-Visit the Sayadeen Village.<br>-Tranportations.</p>
-                            <div class="d-flex justify-content-center mb-2">
-                                <a href="booking.html#booking-form" class="btn btn-sm btn-primary px-3" style="border-radius: 30px 30px 30px 30px;">Book Now</a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
+                    <a class="position-relative d-block h-100 overflow-hidden" href="saint.php">
+                        <img class="img-fluid position-absolute w-100 h-100" src="Saint Catherine/vlad-kiselov-Fe3eF795O24-unsplash-1.jpg" alt="" style="object-fit: cover;">
+                        <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">20% OFF</div>
+                        <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Saint Cathrine</div>
+                    </a>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="package-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="ras shetaan/edit 2.jpg" alt="">
-                        </div>
-                        <div class="d-flex border-bottom">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt text-primary me-2"></i>Ras Shetaan</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>5 days</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fas fa-campground text-primary me-2"></i>Mixer</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>2 Person</small>
-                        </div>
-                        <div class="text-center p-4">
-                            <h3 class="mb-0">2,500 L.E</h3>
-                            <div class="mb-3">
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                            </div>
-                            <p>You will enjoy your holiday in Mixer Camp in a simple way; This package contain:<br>-Room with 2 beds & bathroom.<br>-Trip for Sayedeen Village.<br>-Visit the Nuwamis.<br>-Tranportations.</p>
-                            <div class="d-flex justify-content-center mb-2">
-                                <a href="booking.html#booking-form" class="btn btn-sm btn-primary px-3" style="border-radius: 30px 30px 30px 30px;">Book Now</a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-lg-100 col-md-500 wow zoomIn" data-wow-delay="0.5s" style="min-height: 350px;">
+                    <a class="position-relative d-block h-100 overflow-hidden" href="ras.php">
+                        <img class="img-fluid position-absolute w-100 h-100" src="ras shetaan/edit 2.jpg" alt="" style="object-fit: cover;">
+                        <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">15% OFF</div>
+                        <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Ras Shetaan</div>
+                    </a>
                 </div>
+
             </div>
-            
         </div>
-        <br>
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <center>
-        <a href="contact.html" class="btn btn-sm btn-primary px-3" style="border-radius: 100px 100px 100px 100px; height: 100%;">Customize Your Own Program Now</a>
-    </center>
-    </div>
     </div>
     <!-- Package End -->
         
@@ -222,11 +180,11 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Company</h4>
-                    <a class="btn btn-link" href="about.html">About Us</a>
-                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="about.php">About Us</a>
+                    <a class="btn btn-link" href="contact.php">Contact Us</a>
                     <a class="btn btn-link" href="">Privacy Policy</a>
                     <a class="btn btn-link" href="">Terms &amp; Condition</a>
-                    <a class="btn btn-link" href="contact.html">FAQs &amp; Help</a>
+                    <a class="btn btn-link" href="contact.php">FAQs &amp; Help</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
@@ -267,7 +225,7 @@
                     <p>Let's live the Adventure now</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"><a href="login.html">Registration</a></button>
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"><a href="register.php">Registration</a></button>
                     </div>
                 </div>
             </div>
@@ -276,16 +234,16 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        © <a class="border-bottom" href="index.html">Adventurous</a>, All Right Reserved.
+                        © <a class="border-bottom" href="index.php">Adventurous</a>, All Right Reserved.
 
-                        Designed By <a class="border-bottom" href="team.html">Our Team</a>
+                        Designed By <a class="border-bottom" href="team.php">Our Team</a>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
-                            <a href="index.html">Home</a>
+                            <a href="index.php">Home</a>
                             <a href="">Cookies</a>
-                            <a href="contact.html">Help</a>
-                            <a href="contact.html">FQAs</a>
+                            <a href="contact.php">Help</a>
+                            <a href="contact.php">FQAs</a>
                         </div>
                     </div>
                 </div>
@@ -314,5 +272,4 @@
     <script src="js/main.js"></script>
 
 
-</body>
-</html>
+</body></html>

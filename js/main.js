@@ -319,22 +319,22 @@ var modal = document.getElementById('id02');
                 
                 switch(city) {
                     case 'Saint Catherine':
-                        window.location = 'saint.html';
+                        window.location = 'saint.php';
                         break;
                     case 'Dahab':
-                        window.location = 'da.html';
+                        window.location = 'da.php';
                         break;
                     case 'Nuweiba':
-                        window.location = 'nu.html';
+                        window.location = 'nu.php';
                         break;
                     case 'Ras Sheetan':
-                        window.location = 'ras.html';
+                        window.location = 'ras.php';
                         break;
                     case 'Taba':
-                        window.location = 'ta.html';
+                        window.location = 'ta.php';
                         break;
                     default:
-                        window.location = '404.html'
+                        window.location = '404.php'
                 }
             }
 
