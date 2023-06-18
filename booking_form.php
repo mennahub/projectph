@@ -5,15 +5,16 @@ include 'db_connection.php';
 $name = $_POST["name"];
 $email = $_POST["email"];
 $date = $_POST["date"];
-$package = $_POST["package"];
-$special_request = $_POST["special_request"];
+$location = $_POST["package"];
+$type = $_POST["type"];
+
 
 // Insert the data into the database
-$sql = "INSERT INTO BookingRequest (name, email, date, package, special_request)
-        VALUES ('$name', '$email', '$date', '$package', '$special_request')";
+$sql = "INSERT INTO Reservation (name, email, date, location, type)
+        VALUES ('$name', '$email', '$date', '$location', '$type')";
 
 if (mysqli_query($conn, $sql)) {
-    echo "Booking request submitted successfully!";
+    header("location: /projectph/Payment.php?packageName=" . $location . "&bookingDate=" . $date . "&customerName=" . $name);
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }

@@ -1,16 +1,16 @@
 <?php
-    include 'functions.php';
+include 'functions.php';
 
-    $mysql = new mysqli('localhost', 'root','Qwertyuiop.10', 'adventurous');
+$mysql = new mysqli('localhost', 'root', 'Qwertyuiop.10', 'adventurous');
 
-    if ($mysql -> connect_errno) {
-        echo 'Failed  to connect';
-        exit();
-    }
+if ($mysql->connect_errno) {
+    echo 'Failed  to connect';
+    exit();
+}
 
-    if ($result = $mysql -> query("SELECT * from User")) {
-        echo $result;
-    }
+if ($result = $mysql->query("SELECT * from User")) {
+    echo $result;
+}
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +29,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -49,7 +51,8 @@
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -62,16 +65,23 @@
         <div class="row gx-0">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Modern Academy, Cairo, Egypt</small>
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Modern Academy, Cairo,
+                        Egypt</small>
                     <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+01004159357</small>
-                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>adventurous.camping124@gmail.com</small>
+                    <small class="text-light"><i
+                            class="fa fa-envelope-open me-2"></i>adventurous.camping124@gmail.com</small>
                 </div>
             </div>
             <div class="col-lg-4 text-center text-lg-end">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://twitter.com/adventurou79102?s=11"><i class="fab fa-twitter fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/profile.php?id=100092186344850&mibextid=LQQJ4d" target="_blank"><i style="--i:6;--clr:#1877f2;" class="fab fa-facebook-f fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://instagram.com/adve.nturouscamping?igshid=YmMyMTA2M2Y"><i class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                        href="https://twitter.com/adventurou79102?s=11"><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                        href="https://www.facebook.com/profile.php?id=100092186344850&mibextid=LQQJ4d"
+                        target="_blank"><i style="--i:6;--clr:#1877f2;" class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                        href="https://instagram.com/adve.nturouscamping?igshid=YmMyMTA2M2Y"><i
+                            class="fab fa-instagram fw-normal"></i></a>
                 </div>
             </div>
         </div>
@@ -84,7 +94,7 @@
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
             <a href="" class="navbar-brand p-0">
                 <h1 class="text-primary m-0"><i class="fas fa-campground me-3"></i>Adventurous</h1>
-                 <!-- <img src="img/Logo.jpg" alt="Logo"> -->
+                <!-- <img src="img/Logo.jpg" alt="Logo"> -->
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -110,8 +120,8 @@
                 <?php else: ?>
                     <a href="register.php" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
                 <?php endif; ?>
-                
-                
+
+
             </div>
         </nav>
         <div class="container-fluid bg-primary py-5 mb-5 hero-header">
@@ -142,14 +152,15 @@
                     <i class="bi bi-exclamation-triangle display-1 text-primary"></i>
                     <h1 class="display-1">404</h1>
                     <h1 class="mb-4">Page Not Found</h1>
-                    <p class="mb-4">We’re sorry, the page you have looked for does not exist in our website! Maybe go to our home page or try to use a search?</p>
+                    <p class="mb-4">We’re sorry, the page you have looked for does not exist in our website! Maybe go to
+                        our home page or try to use a search?</p>
                     <a class="btn btn-primary rounded-pill py-3 px-5" href="index.php">Go Back To Home</a>
                 </div>
             </div>
         </div>
     </div>
     <!-- 404 End -->
-        
+
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -169,9 +180,14 @@
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+01004159357</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>adventurous.camping124@gmail.com</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href="https://twitter.com/adventurou79102?s=11"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=100092186344850&mibextid=LQQJ4d"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://instagram.com/adve.nturouscamping?igshid=YmMyMTA2M2Y"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://twitter.com/adventurou79102?s=11"><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social"
+                            href="https://www.facebook.com/profile.php?id=100092186344850&mibextid=LQQJ4d"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social"
+                            href="https://instagram.com/adve.nturouscamping?igshid=YmMyMTA2M2Y"><i
+                                class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -181,13 +197,16 @@
                             <img class="img-fluid bg-light p-1" src="Dahab/5b.jpg" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="Nuweiba/Al-Magarra-Camp-Hotel-Nuweiba-Exterior.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="Nuweiba/Al-Magarra-Camp-Hotel-Nuweiba-Exterior.jpg"
+                                alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="ras shetaan/5ed2efb38752de6724c03560ffc4a3c8.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="ras shetaan/5ed2efb38752de6724c03560ffc4a3c8.jpg"
+                                alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="Saint Catherine/vlad-kiselov-Fe3eF795O24-unsplash-1.jpg" alt="">
+                            <img class="img-fluid bg-light p-1"
+                                src="Saint Catherine/vlad-kiselov-Fe3eF795O24-unsplash-1.jpg" alt="">
                         </div>
                         <div class="col-4">
                             <img class="img-fluid bg-light p-1" src="Taba/337646264.jpg" alt="">
@@ -201,8 +220,10 @@
                     <h4 class="text-white mb-3">Newsletter</h4>
                     <p>Let's live the Adventure now</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"><a href="register.php">Registration</a></button>
+                        <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text"
+                            placeholder="Your email">
+                        <a class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
+                            href="register.php">Registration</a>
                     </div>
                 </div>
             </div>
@@ -231,12 +252,13 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top">&uarr;</a>
 
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/bootstrap-5.0.2/dist/js/bootstrap.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>

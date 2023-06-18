@@ -9,7 +9,7 @@ $username = $conn->real_escape_string($_POST['username']);
 $password = $conn->real_escape_string($_POST['password']);
 
 // Query to retrieve user information from the database
-$sql = "SELECT * FROM UserAccount WHERE username = '$username' AND password = '$password'";
+$sql = "SELECT * FROM user WHERE username = '$username' AND password = '$password'";
 
 // Execute the SQL query and check for errors
 $result = $conn->query($sql);
@@ -23,7 +23,7 @@ if ($result->num_rows == 1) {
     exit;
 } else {
     // Login unsuccessful, redirect to login page with error message
-    header('Location: register.php?error=1');
+    echo "Wrong credentials!";
     exit;
 }
 

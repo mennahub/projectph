@@ -9,6 +9,8 @@ $username = $conn->real_escape_string($_POST['username']);
 $email = $conn->real_escape_string($_POST['email']);
 $password = $conn->real_escape_string($_POST['password']);
 $repeat_password = $conn->real_escape_string($_POST['repeat-password']);
+$age = $conn->real_escape_string($_POST['age']);
+$phone_number = $conn->real_escape_string($_POST['phone_number']);
 
 // Check if password and repeat-password match
 if ($password != $repeat_password) {
@@ -16,8 +18,8 @@ if ($password != $repeat_password) {
 }
 
 // Query to insert user information into the database
-$sql = "INSERT INTO UserAccount (first_name, last_name, username, email, password) 
-        VALUES ('$first_name', '$last_name', '$username', '$email', '$password')";
+$sql = "INSERT INTO User (first_name, last_name, username, email, password, phone_number, age) 
+        VALUES ('$first_name', '$last_name', '$username', '$email', '$password', '$phone_number', $age)";
 
 // Execute the SQL query and check for errors
 if ($conn->query($sql) === TRUE) {

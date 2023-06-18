@@ -1,142 +1,182 @@
--- phpMyAdmin SQL Dump
--- version 5.2.0
--- https://www.phpmyadmin.net/
---
--- Host: localhost:8889
--- Generation Time: Jun 11, 2023 at 11:48 AM
--- Server version: 5.7.39
--- PHP Version: 8.2.0
+CREATE SCHEMA IF NOT EXISTS `Adventurous` DEFAULT CHARACTER SET utf8 ;
+USE `Adventurous` ;
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
+-- Table `Adventurous`.`User`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Adventurous`.`User` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `email` VARCHAR(60) NOT NULL,
+  `first_name` VARCHAR(45) NOT NULL,
+  `last_name` VARCHAR(45) NOT NULL,
+  `username` VARCHAR(45) NOT NULL,
+  `password` INT NOT NULL,
+  `age` INT NOT NULL,
+  `phone_number` CHAR(15) NOT NULL,
+  PRIMARY KEY (`id`))
+ ENGINE = InnoDB;
 
+-- Table `Adventurous`.`Invoice`
+CREATE TABLE IF NOT EXISTS `Adventurous`.`Invoice` (
+  `number` INT NOT NULL,
+  `date` DATETIME(6) NOT NULL,
+  `user_id` INT NOT NULL,
+  PRIMARY KEY (`number`,`user_id`),
+  INDEX `fk_Invoice_User1_idx` (`user_id` ASC),
+  CONSTRAINT `fk_Invoice_User1_`
+  FOREIGN KEY (`user_id`)
+  REFERENCES `Adventurous`.`User`(`id`)
+  ON DELETE NO ACTION 
+  ON UPDATE NO ACTION)
+ENGINE = InnoDB;
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+-- Table `Adventurous`.`Work with`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Adventurous`.`Work with` (
+  `user_id` INT NOT NULL,
+  `host_id` INT NOT NULL,
+  PRIMARY KEY (`user_id`, `host_id`),
+  INDEX `fk_User_has_Host_Host1_idx` (`host_id` ASC),
+  INDEX `fk_User_has_Host_User_idx` (`user_id` ASC),
+  CONSTRAINT `fk_User_has_Host_User`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `Adventurous`.`User` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_User_has_Host_Host1`
+    FOREIGN KEY (`host_id`)
+    REFERENCES `Adventurous`.`Host` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
 
---
--- Database: `adve`
---
+-- Table `Adventurous`.`Host`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Adventurous`.`Host` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(60) NOT NULL, 
+  `phone_number` CHAR(15) NOT NULL,
+  `address` VARCHAR(60) NOT NULL,
+  `location` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
 
--- --------------------------------------------------------
+-- Table `Adventurous`.`Suggest`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Adventurous`.`Suggest` (
+  `user_id` INT NOT NULL,
+  `complain_code` INT NOT NULL,
+  PRIMARY KEY (`user_id`, `complain_code`),
+  INDEX `fk_User_has_Complain_Complain1_idx` (`complain_code` ASC),
+  INDEX `fk_User_has_Complain_User1_idx` (`user_id` ASC),
+  CONSTRAINT `fk_User_has_Complain_User1`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `Adventurous`.`User` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_User_has_Complain_Complain1`
+    FOREIGN KEY (`complain_code`)
+    REFERENCES `Adventurous`.`Complain` (`code`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
 
---
--- Table structure for table `BookingRequest`
---
+-- Table `Adventurous`.`Complain`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Adventurous`.`Complain` (
+  `code` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  `type` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  `message` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`code`))
+ENGINE = InnoDB;
 
-CREATE TABLE `BookingRequest` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `date` varchar(255) NOT NULL,
-  `package` varchar(255) NOT NULL,
-  `special_request` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-- Table `Adventurous`.`Ask for`
+-- -----------------------------------------------------
+	CREATE TABLE IF NOT EXISTS `Adventurous`.`Ask for` (
+	  `user_id` INT NOT NULL,
+	  `transportation_code` INT  NOT NULL,
+	  PRIMARY KEY (`user_id`, `transportation_code`),
+	  INDEX `fk_User_has_Transportation_Transportation1_idx` (`transportation_code` ASC),
+	  INDEX `fk_User_has_Transportation_User1_idx` (`user_id` ASC),
+	  CONSTRAINT `fk_User_has_Transportation_User1`
+		FOREIGN KEY (`user_id`)
+		REFERENCES `Adventurous`.`User` (`id`)
+		ON DELETE NO ACTION
+		ON UPDATE NO ACTION,
+	  CONSTRAINT `fk_User_has_Transportation_Transportation1`
+		FOREIGN KEY (`transportation_code`)
+		REFERENCES `Adventurous`.`Transportation` (`code`)
+		ON DELETE NO ACTION
+		ON UPDATE NO ACTION)
+	ENGINE = InnoDB;
 
---
--- Dumping data for table `BookingRequest`
---
+-- Table `Adventurous`.`Transportation`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Adventurous`.`Transportation` (
+  `code` INT NOT NULL,
+  `phone` CHAR(15) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`code`))
+ENGINE = InnoDB;
 
-INSERT INTO `BookingRequest` (`id`, `name`, `email`, `date`, `package`, `special_request`) VALUES
-(1, 'Hossam', 'hossam.deiab@gmail.com', '05/15/2023', 'Taba 2', 'This is a request'),
-(2, '', '', '', '', '');
+-- Table `Adventurous`.`Ask`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Adventurous`.`Ask` (
+  `user_id` INT NOT NULL,
+  `program_code` INT NOT NULL,
+  PRIMARY KEY (`User_ID`, `program_code`),
+  INDEX `fk_User_has_Program_Program1_idx` (`program_code` ASC),
+  INDEX `fk_User_has_Program_User1_idx` (`user_id` ASC),
+  CONSTRAINT `fk_User_has_Program_User1`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `Adventurous`.`User` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_User_has_Program_Program1`
+    FOREIGN KEY (`program_code`)
+    REFERENCES `Adventurous`.`Program` (`code`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
 
--- --------------------------------------------------------
+-- Table `Adventurous`.`Program`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Adventurous`.`Program` (
+  `code` INT NOT NULL,
+  `type` VARCHAR(45) NOT NULL,
+  `location` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`code`))
+ENGINE = InnoDB;
 
---
--- Table structure for table `ContactRequest`
---
+-- Table `Adventurous`.`Reserve`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Adventurous`.`Reserve` (
+  `user_id` INT NOT NULL,
+  `reservation_code` INT NOT NULL,
+  PRIMARY KEY (`user_id`, `reservation_code`),
+  INDEX `fk_User_has_Reservation_Reservation1_idx` (`reservation_code` ASC),
+  INDEX `fk_User_has_Reservation_User1_idx` (`user_id` ASC),
+  CONSTRAINT `fk_User_has_Reservation_User1`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `Adventurous`.`User` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_User_has_Reservation_Reservation1`
+    FOREIGN KEY (`reservation_code`)
+    REFERENCES `Adventurous`.`Reservation` (`code`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
 
-CREATE TABLE `ContactRequest` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `subject` varchar(255) NOT NULL,
-  `message` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `ContactRequest`
---
-
-INSERT INTO `ContactRequest` (`id`, `name`, `email`, `subject`, `message`) VALUES
-(1, 'Hossam', 'hossam.deiab@gmail.com', 'Thank you for the great service', 'Thanks a lot');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `UserAccount`
---
-
-CREATE TABLE `UserAccount` (
-  `ID` int(11) NOT NULL,
-  `first_name` varchar(255) NOT NULL,
-  `last_name` varchar(255) NOT NULL,
-  `username` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `UserAccount`
---
-
-INSERT INTO `UserAccount` (`ID`, `first_name`, `last_name`, `username`, `email`, `password`) VALUES
-(1, 'Hossam', 'Deiab', '', 'hossam.deiab@gmail.com', 'pass123'),
-(3, 'Hossam', 'Deiab', 'hossamdeiab', 'hossam.deiab1@gmail.com', 'pass123'),
-(5, 'Hossam', 'Deiab', 'hossamdeiab1', 'hossam.deiab2@gmail.com', '1234'),
-(6, 'Hossam', 'Deiab', 'hussamdeiab2', 'hossamdeiab2@gmail.com', 'pass12345');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `BookingRequest`
---
-ALTER TABLE `BookingRequest`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `ContactRequest`
---
-ALTER TABLE `ContactRequest`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `UserAccount`
---
-ALTER TABLE `UserAccount`
-  ADD PRIMARY KEY (`ID`),
-  ADD UNIQUE KEY `username` (`username`),
-  ADD UNIQUE KEY `email` (`email`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `BookingRequest`
---
-ALTER TABLE `BookingRequest`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `ContactRequest`
---
-ALTER TABLE `ContactRequest`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `UserAccount`
---
-ALTER TABLE `UserAccount`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-- Table `Adventurous`.`Reservation`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Adventurous`.`Reservation` (
+    `code` INT NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(45) NOT NULL,
+    `date` date NOT NULL,
+    `type` VARCHAR(255),
+    `location` VARCHAR(45) NOT NULL,
+    `email` VARCHAR(45) NOT NULL,
+    PRIMARY KEY (`code`)
+)  ENGINE=INNODB;

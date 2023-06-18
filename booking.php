@@ -1,9 +1,11 @@
 <?php
-    include 'functions.php';
+include 'functions.php';
 ?>
 
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+
+<head>
     <meta charset="utf-8">
     <title>Adventurous- Camping Agency -</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -16,7 +18,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&amp;family=Nunito:wght@600;700;800&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&amp;family=Nunito:wght@600;700;800&amp;display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -36,7 +40,8 @@
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -49,16 +54,23 @@
         <div class="row gx-0">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Modern Academy, Cairo, Egypt</small>
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Modern Academy, Cairo,
+                        Egypt</small>
                     <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+01004159357</small>
-                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>adventurous.camping124@gmail.com</small>
+                    <small class="text-light"><i
+                            class="fa fa-envelope-open me-2"></i>adventurous.camping124@gmail.com</small>
                 </div>
             </div>
             <div class="col-lg-4 text-center text-lg-end">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://twitter.com/adventurou79102?s=11"><i class="fab fa-twitter fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/profile.php?id=100092186344850&mibextid=LQQJ4d" target="_blank"><i style="--i:6;--clr:#1877f2;" class="fab fa-facebook-f fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://instagram.com/adve.nturouscamping?igshid=YmMyMTA2M2Y"><i class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                        href="https://twitter.com/adventurou79102?s=11"><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                        href="https://www.facebook.com/profile.php?id=100092186344850&mibextid=LQQJ4d"
+                        target="_blank"><i style="--i:6;--clr:#1877f2;" class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                        href="https://instagram.com/adve.nturouscamping?igshid=YmMyMTA2M2Y"><i
+                            class="fab fa-instagram fw-normal"></i></a>
                 </div>
             </div>
         </div>
@@ -129,18 +141,20 @@
             <div class="row gy-5 gx-4 justify-content-center">
                 <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="position-relative border border-primary pt-5 pb-4 px-4">
-                        <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow"
+                            style="width: 100px; height: 100px;">
                             <i class="fa fa-map-marker-alt fa-3x text-white"></i>
                         </div>
                         <h5 class="mt-4"><a href="Package.php"> Where?</a></h5>
                         <hr class="w-25 mx-auto bg-primary mb-1">
                         <hr class="w-50 mx-auto bg-primary mt-0">
-                        <p class="mb-0">Choose your prefered destination, <br> ,program you like.  </p>
+                        <p class="mb-0">Choose your prefered destination, <br> ,program you like. </p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="position-relative border border-primary pt-5 pb-4 px-4">
-                        <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow"
+                            style="width: 100px; height: 100px;">
                             <i class="fa fa-clock fa-3x text-white"></i>
                         </div>
                         <h5 class="mt-4"><a href="booking.php#booking-form">When?</a> </h5>
@@ -151,7 +165,8 @@
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="position-relative border border-primary pt-5 pb-4 px-4">
-                        <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow"
+                            style="width: 100px; height: 100px;">
                             <i class="fa fa-dollar-sign fa-3x text-white"></i>
                         </div>
                         <h5 class="mt-4"><a href="booking.php#booking-form">Confirm!</a></h5>
@@ -175,8 +190,11 @@
                     <div class="col-md-6 text-white">
                         <h6 class="text-white text-uppercase">Booking</h6>
                         <h1 class="text-white mb-4">Online Booking</h1>
-                        <p class="mb-4">We Want to make it easy for you, So now you can pay online to reserve your seat.</p>
-                        <p class="mb-4">If you need to enjoy your holiday in a diffrent place with a positive energy , you need to book now and the steps is so easy; Let's join our Adventure to have a good memories.</p>
+                        <p class="mb-4">We Want to make it easy for you, So now you can pay online to reserve your seat.
+                        </p>
+                        <p class="mb-4">If you need to enjoy your holiday in a diffrent place with a positive energy ,
+                            you need to book now and the steps is so easy; Let's join our Adventure to have a good
+                            memories.</p>
                         <p class="mb-4">You need just an easy step to enjoy our fun memories.</p>
                         <a class="btn btn-outline-light py-3 px-5 mt-2" href="about.php">Read More</a>
                     </div>
@@ -186,25 +204,30 @@
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control bg-transparent" id="name" name="name" placeholder="Your Name" required>
+                                        <input type="text" class="form-control bg-transparent" id="name" name="name"
+                                            placeholder="Your Name" required>
                                         <label for="name">Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control bg-transparent" id="email" name="email" placeholder="Your Email">
+                                        <input type="email" class="form-control bg-transparent" id="email" name="email"
+                                            placeholder="Your Email">
                                         <label for="email">Email</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating date" id="booking-date" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-transparent datetimepicker-input" id="booking-date" name="date" placeholder="Date &amp; Time" data-target="#booking-date" data-toggle="datetimepicker" required>
+                                        <input type="text" class="form-control bg-transparent datetimepicker-input"
+                                            id="booking-date" name="date" placeholder="Date &amp; Time"
+                                            data-target="#booking-date" data-toggle="datetimepicker" required>
                                         <label for="datetime">Date &amp; Time</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <select class="form-select bg-transparent" id="packages" name="package" required>
+                                        <select class="form-select bg-transparent" id="packages" name="package"
+                                            required>
                                             <option value="Dahab 1">Dahab 1</option>
                                             <option value="Dahab 2">Dahab 2</option>
                                             <option value="Dahab 3">Dahab 3</option>
@@ -226,7 +249,8 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control bg-transparent" placeholder="Type" id="type" name="type" style="height: 100px"></textarea>
+                                        <textarea class="form-control bg-transparent" placeholder="Type" id="type"
+                                            name="type" style="height: 100px"></textarea>
                                         <label for="type">Type</label>
                                     </div>
                                 </div>
@@ -241,7 +265,7 @@
         </div>
     </div>
     <!-- Booking Start -->
-        
+
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -261,9 +285,14 @@
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+01004159357</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>adventurous.camping124@gmail.com</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href="https://twitter.com/adventurou79102?s=11"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=100092186344850&mibextid=LQQJ4d"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://instagram.com/adve.nturouscamping?igshid=YmMyMTA2M2Y"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://twitter.com/adventurou79102?s=11"><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social"
+                            href="https://www.facebook.com/profile.php?id=100092186344850&mibextid=LQQJ4d"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social"
+                            href="https://instagram.com/adve.nturouscamping?igshid=YmMyMTA2M2Y"><i
+                                class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -273,13 +302,16 @@
                             <img class="img-fluid bg-light p-1" src="Dahab/5b.jpg" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="Nuweiba/Al-Magarra-Camp-Hotel-Nuweiba-Exterior.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="Nuweiba/Al-Magarra-Camp-Hotel-Nuweiba-Exterior.jpg"
+                                alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="ras shetaan/5ed2efb38752de6724c03560ffc4a3c8.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="ras shetaan/5ed2efb38752de6724c03560ffc4a3c8.jpg"
+                                alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="Saint Catherine/vlad-kiselov-Fe3eF795O24-unsplash-1.jpg" alt="">
+                            <img class="img-fluid bg-light p-1"
+                                src="Saint Catherine/vlad-kiselov-Fe3eF795O24-unsplash-1.jpg" alt="">
                         </div>
                         <div class="col-4">
                             <img class="img-fluid bg-light p-1" src="Taba/337646264.jpg" alt="">
@@ -293,8 +325,10 @@
                     <h4 class="text-white mb-3">Newsletter</h4>
                     <p>Let's live the Adventure now</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"><a href="register.php">Registration</a></button>
+                        <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text"
+                            placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"><a
+                                href="register.php">Registration</a></button>
                     </div>
                 </div>
             </div>
@@ -323,12 +357,13 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top">&uarr;</a>
 
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/bootstrap-5.0.2/dist/js/bootstrap.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
@@ -349,13 +384,15 @@
             //     const packageName = form['packages'].value
             //     window.location = `Payment.php?bookingDate=${bookingDate}&packageName=${packageName}&customerName=${customerName}`
             // })
-            
+
             $('#booking-date').datetimepicker({
-                format: 'L',
+                format: 'YYYY-MM-DD',
                 minDate: new Date()
             });
         });
     </script>
 
 
-</body></html>
+</body>
+
+</html>
