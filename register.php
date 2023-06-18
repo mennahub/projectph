@@ -61,12 +61,12 @@
             <div class="col-lg-4 text-center text-lg-end">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-                        href="https://twitter.com/adventurou79102?s=11"><i class="fab fa-twitter fw-normal"></i></a>
+                        href="https://twitter.com/adventurou79102?s=11" target="_blank"><i class="fab fa-twitter fw-normal"></i></a>
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
                         href="https://www.facebook.com/profile.php?id=100092186344850&mibextid=LQQJ4d"
                         target="_blank"><i style="--i:6;--clr:#1877f2;" class="fab fa-facebook-f fw-normal"></i></a>
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-                        href="https://instagram.com/adve.nturouscamping?igshid=YmMyMTA2M2Y"><i
+                        href="https://instagram.com/adve.nturouscamping?igshid=YmMyMTA2M2Y" target="_blank"><i
                             class="fab fa-instagram fw-normal"></i></a>
                 </div>
             </div>
