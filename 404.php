@@ -1,5 +1,16 @@
 <?php
     include 'functions.php';
+
+    $mysql = new mysqli('localhost', 'root','Qwertyuiop.10', 'adventurous');
+
+    if ($mysql -> connect_errno) {
+        echo 'Failed  to connect';
+        exit();
+    }
+
+    if ($result = $mysql -> query("SELECT * from User")) {
+        echo $result;
+    }
 ?>
 
 <!DOCTYPE html>

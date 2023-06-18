@@ -168,19 +168,19 @@
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
-                                    <label for="name">Your Name</label>
+                                    <label for="name">Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
-                                    <label for="email">Your Email</label>
+                                    <label for="email">Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
-                                    <label for="subject">Subject</label>
+                                    <input type="text" class="form-control" id="type" name="type" placeholder="Type" required>
+                                    <label for="type">Type</label>
                                 </div>
                             </div>
                             <div class="col-12">

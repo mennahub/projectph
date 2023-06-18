@@ -157,6 +157,10 @@
                           <input type="text" placeholder="Enter last_name" name="last_name" required>
                           <br>
                           <br>
+                          <label for="age"><b>Age</b></label>
+                          <input type="age" placeholder="Enter Age" name="age" required>
+                          <br>
+                          <br>
                           <label for="email"><b>Email</b></label>
                           <input type="text" placeholder="Enter Email" name="email" required>
                           <br>    

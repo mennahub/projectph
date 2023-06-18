@@ -187,13 +187,13 @@
                                 <div class="col-md-6">
                                     <div class="form-floating">
                                         <input type="text" class="form-control bg-transparent" id="name" name="name" placeholder="Your Name" required>
-                                        <label for="name">Your Name</label>
+                                        <label for="name">Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
                                         <input type="email" class="form-control bg-transparent" id="email" name="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
+                                        <label for="email">Email</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -226,8 +226,8 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control bg-transparent" placeholder="Special Request" id="special_request" name="special_request" style="height: 100px"></textarea>
-                                        <label for="special_request">Special Request</label>
+                                        <textarea class="form-control bg-transparent" placeholder="Type" id="type" name="type" style="height: 100px"></textarea>
+                                        <label for="type">Type</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
