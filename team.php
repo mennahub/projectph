@@ -267,7 +267,7 @@ include 'functions.php';
                             <img class="img-fluid" src="img/Joo.jpeg" alt="" height="300" width="500">
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href="https://www.facebook.com/profile.php?id=100042922395110&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin"></i></a>
                             <a class="btn btn-square mx-1" href="https://instagram.com/__j0oo?igshid=YmMyMTA2M2Y="><i
                                     class="fab fa-instagram"></i></a>

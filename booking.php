@@ -196,7 +196,6 @@ include 'functions.php';
                             you need to book now and the steps is so easy; Let's join our Adventure to have a good
                             memories.</p>
                         <p class="mb-4">You need just an easy step to enjoy our fun memories.</p>
-                        <a class="btn btn-outline-light py-3 px-5 mt-2" href="about.php">Read More</a>
                     </div>
                     <div class="col-md-6">
                         <h1 class="text-white mb-4">Book A Tour</h1>

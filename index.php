@@ -154,19 +154,15 @@ include 'functions.php';
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="img-fluid position-absolute w-100 h-100" src="img/about us.jpg" alt=""
-                            style="object-fit: cover;">
+                        <img class="img-fluid position-absolute w-100 h-100" src="img/home.webp" alt="" style="object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
+                    <h6 class="section-title bg-white text-start text-primary pe-3">Our Website</h6>
                     <h1 class="mb-4">Welcome to <span class="text-primary">Adventurous</span></h1>
-                    <p class="mb-4">Camping:is an easy, healthy and cheap activity that can easily enjoyed by
-                        everyone;It has a lot of fun more than residing in hitels or resort.</p>
-                    <p class="mb-4">Many place across Egypt such as <b><i>South Sinai</i></b>,are full of charming
-                        landscape, nature reserves and mountains, which has captured traveler's imaginations to
-                        experience the true taste of adventures and escape from the hustle of big cities.</p>
-                    <p class="mb-4"></p>
+                    <p class="mb-4">This Website Will Help You To Enjoy Your Vacation In a Quite Place and To Live The Adventure.</p>
+                    <p class="mb-4">You Will See Many Natural Places In Egypt ;You will Enjoy The View.<b><i>South Sinai:</i></b> It`s a Big City That You Can Enjoy Your Vacation in Enjoying a Natural Views and Peacefull Time.</p>
+                    <p class="mb-4">Our Website Can Gives You This Services</p>
                     <div class="row gy-2 gx-4 mb-4">
                         <div class="col-sm-6">
                             <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>24/7 Service</p>
@@ -175,8 +171,7 @@ include 'functions.php';
                             <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Handpicked Camps</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Comfortable
-                                Transportations</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Comfortable Transportations</p>
                         </div>
                         <div class="col-sm-6">
                             <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Tour Guid</p>
@@ -188,11 +183,11 @@ include 'functions.php';
                             <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Natural Places Tours</p>
                         </div>
                     </div>
-                    <a class="btn btn-primary py-3 px-5 mt-2" href="team.php">Read More</a>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="about.php">Read More</a>
                 </div>
             </div>
         </div>
-    </div>
+    </div>    
     <!-- About End -->
 
 
@@ -286,76 +281,6 @@ include 'functions.php';
     <!-- Service End -->
 
 
-    <!-- Destination Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Packages</h6>
-                <h1 class="mb-5">Choose your Favorite Location</h1>
-            </div>
-            <div class="row g-3">
-                <div class="col-lg-7 col-md-6">
-                    <div class="row g-3">
-                        <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
-                            <a class="position-relative d-block overflow-hidden" href="da.php">
-                                <img class="img-fluid position-absolute w-100 h-100" src="Dahab/5b.jpg" alt="">
-                                <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
-                                    35% OFF</div>
-                                <div
-                                    class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">
-                                    Dahab</div>
-                            </a>
-                        </div>
-                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
-                            <a class="position-relative d-block overflow-hidden" href="Nu.php">
-                                <img class="img-fluid position-absolute w-100 h-100"
-                                    src="Nuweiba/flyingcarpettours.com_.jpeg" alt="">
-                                <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
-                                    30% OFF</div>
-                                <div
-                                    class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">
-                                    Nuweiba</div>
-                            </a>
-                        </div>
-                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
-                            <a class="position-relative d-block overflow-hidden" href="ta.php">
-                                <img class="img-fluid position-absolute w-100 h-100" src="Taba/taba-1-1024x654.jpg"
-                                    alt="">
-                                <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
-                                    25% OFF</div>
-                                <div
-                                    class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">
-                                    Taba</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
-                    <a class="position-relative d-block h-100 overflow-hidden" href="saint.php">
-                        <img class="img-fluid position-absolute w-100 h-100"
-                            src="Saint Catherine/vlad-kiselov-Fe3eF795O24-unsplash-1.jpg" alt=""
-                            style="object-fit: cover;">
-                        <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">20% OFF
-                        </div>
-                        <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Saint
-                            Cathrine</div>
-                    </a>
-                </div>
-                <div class="col-lg-100 col-md-500 wow zoomIn" data-wow-delay="0.5s" style="min-height: 350px;">
-                    <a class="position-relative d-block h-100 overflow-hidden" href="ras.php">
-                        <img class="img-fluid position-absolute w-100 h-100" src="ras shetaan/edit 2.jpg" alt=""
-                            style="object-fit: cover;">
-                        <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">15% OFF
-                        </div>
-                        <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Ras
-                            Shetaan</div>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- Destination Start -->
 
 
     <!-- Process Start -->
@@ -407,175 +332,6 @@ include 'functions.php';
         </div>
     </div>
     <!-- Process Start -->
-
-
-    <!-- Team Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Our Team</h6>
-                <h1 class="mb-5">Meet Our Team</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/Menna.jpeg" alt="" height="300" width="500">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
-                            <a class="btn btn-square mx-1"
-                                href="https://www.facebook.com/menna.alaa.71404?mibextid=LQQJ4d"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square mx-1" href="https://www.linkedin.com/in/menna-alaa-863a6720b"><i
-                                    class="fab fa-linkedin"></i></a>
-                            <a class="btn btn-square mx-1"
-                                href="https://instagram.com/menna.alaa06?igshid=YmMyMTA2M2Y="><i
-                                    class="fab fa-instagram"></i></a>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Menna Talaah Alaa</h5>
-                            <small>Team Leader.<br>Front-End Team.</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/Abdallah.jpeg" alt="" height="300" width="500">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
-                            <a class="btn btn-square mx-1"
-                                href="https://www.facebook.com/abdallah.elshamy.33?mibextid=LQQJ4d"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin"></i></a>
-                            <a class="btn btn-square mx-1"
-                                href="https://instagram.com/elshamyy33?igshid=YmMyMTA2M2Y="><i
-                                    class="fab fa-instagram"></i></a>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Abdallah Mohamed</h5>
-                            <small>Co-Founder.<br>DataBase Team.</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/Mariam.jpeg" alt="" height="300" width="500">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
-                            <a class="btn btn-square mx-1"
-                                href="https://www.facebook.com/profile.php?id=100009302018230&mibextid=LQQJ4d"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin"></i></a>
-                            <a class="btn btn-square mx-1"
-                                href="https://instagram.com/mariam.arb2?igshid=YmMyMTA2M2Y="><i
-                                    class="fab fa-instagram"></i></a>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Mariam Mahmoud</h5>
-                            <small>Founder.<br>Front-End Team.</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/Donia.jpg" alt="" height="300" width="500">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
-                            <a class="btn btn-square mx-1"
-                                href="https://www.facebook.com/profile.php?id=100009302018230&mibextid=LQQJ4d"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin"></i></a>
-                            <a class="btn btn-square mx-1"
-                                href="https://instagram.com/doniamohameed66?igshid=YmMyMTA2M2Y="><i
-                                    class="fab fa-instagram"></i></a>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Neamaat Mohamed</h5>
-                            <small>Team member.<br>DataBase Team.</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/Noura.jpg" alt="" height="500" width="500">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
-                            <a class="btn btn-square mx-1"
-                                href="https://www.facebook.com/noura.hany.180?mibextid=LQQJ4d"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin"></i></a>
-                            <a class="btn btn-square mx-1"
-                                href="https://instagram.com/no_uraa_hany?igshid=YmMyMTA2M2Y="><i
-                                    class="fab fa-instagram"></i></a>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Noura Hany</h5>
-                            <small>Team member.<br>DataBase Team.</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/Yasmine.jpg" alt="" height="300" width="500">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
-                            <a class="btn btn-square mx-1"
-                                href="https://www.facebook.com/yasmeen.mohamed.3557?mibextid=LQQJ4d"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin"></i></a>
-                            <a class="btn btn-square mx-1"
-                                href="https://instagram.com/yasmiinmuhamed?igshid=YmMyMTA2M2Y="><i
-                                    class="fab fa-instagram"></i></a>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Yasmine Mohamed</h5>
-                            <small>Team member.<br>DataBase Team.</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/Joo.jpeg" alt="" height="300" width="500">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin"></i></a>
-                            <a class="btn btn-square mx-1" href="https://instagram.com/__j0oo?igshid=YmMyMTA2M2Y="><i
-                                    class="fab fa-instagram"></i></a>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Youssef Mohamed</h5>
-                            <small>Team member.<br>Back-End Team.</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/Debo.jpeg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Hossam ELdien Khaled</h5>
-                            <small>Team member.<br>Back-End Team.</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Team End -->
-
 
     <!-- Testimonial Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
